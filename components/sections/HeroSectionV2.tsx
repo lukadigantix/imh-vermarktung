@@ -17,7 +17,7 @@ export function HeroSectionV2() {
     <section className="bg-white pt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Headline */}
-        <h1 className="mt-10 text-center font-sans text-6xl font-black leading-[1.05] tracking-tight text-brand-dark md:text-8xl lg:text-[7rem]">
+        <h1 className="mt-10 py-16 text-center font-sans text-6xl font-light leading-[1.05] tracking-tight text-brand-dark md:text-8xl lg:text-[7rem]">
           Finden Sie Ihr{" "}
           <br className="hidden sm:block" />
           Traumzuhause.
