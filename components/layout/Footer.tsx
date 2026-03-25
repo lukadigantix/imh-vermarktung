@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-brand-border bg-brand-dark text-brand-light">
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-12">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
-          {/* Brand — left */}
+          {/* Brand — far left */}
           <div className="flex flex-col gap-5">
             <Link href="/">
               <BrandLogo size="lg" inverted />
@@ -16,8 +16,8 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Kontakt + Nav — far right */}
-          <div className="grid grid-cols-2 gap-16">
+          {/* Kontakt + Nav — far right, spread apart */}
+          <div className="flex gap-16 md:gap-24">
             {/* Contact */}
             <div className="flex flex-col gap-3">
               <h3 className="font-sans text-xs font-semibold tracking-widest uppercase text-brand-teal">

@@ -30,7 +30,7 @@ export default function HomePage() {
 
         {/* 3. Advantages + Credibility */}
         <CredibilitySection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         {/* 4. About + Services + FAQ + Contact */}
         {/* <VisionSection /> */}
