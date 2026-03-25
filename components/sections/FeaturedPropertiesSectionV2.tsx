@@ -11,6 +11,7 @@ const filters = [
   { id: "haus", label: "Haus", count: 2 },
   { id: "wohnung", label: "Wohnung", count: 2 },
   { id: "villa", label: "Villa", count: 1 },
+  { id: "grundstueck", label: "Grundstück", count: 1 },
 ];
 
 export function FeaturedPropertiesSectionV2() {
@@ -32,13 +33,15 @@ export function FeaturedPropertiesSectionV2() {
         </div>
 
         {/* Filters row */}
-        <div className="mb-10 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          {/* On mobile: bleed out of container with -mx-6, padding restored inside */}
+          <div className="-mx-6 overflow-x-auto pb-1 scrollbar-none sm:mx-0">
+            <div className="flex items-center gap-2 px-6 pr-6 sm:px-0 sm:pr-0">
             {filters.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setActiveFilter(f.id)}
-                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-all border ${
+                className={`shrink-0 rounded-full px-5 py-2 font-sans text-sm font-medium transition-all border ${
                   activeFilter === f.id
                     ? "bg-brand-blue text-white border-brand-blue shadow-md"
                     : "bg-white text-brand-muted border-brand-border hover:border-brand-dark hover:text-brand-dark"
@@ -50,10 +53,11 @@ export function FeaturedPropertiesSectionV2() {
                 </span>
               </button>
             ))}
+            </div>
           </div>
           <Link
             href="#kontakt"
-            className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white px-5 py-2 font-sans text-sm font-medium text-brand-dark transition-colors hover:border-brand-blue hover:text-brand-blue"
+            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-brand-border bg-white px-5 py-2 font-sans text-sm font-medium text-brand-dark transition-colors hover:border-brand-blue hover:text-brand-blue sm:self-auto"
           >
             Alle anfragen
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

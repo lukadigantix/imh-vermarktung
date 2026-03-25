@@ -31,7 +31,7 @@ export function ContactSection() {
 
           {/* Decorative quote */}
           <div className="border-l-2 border-brand-teal pl-8">
-            <blockquote className="font-display text-3xl font-light italic leading-relaxed text-white/80">
+            <blockquote className="font-display text-xl font-light italic leading-relaxed text-white/80 md:text-3xl">
               «Ich verkaufe nicht einfach Immobilien — ich schaffe
               Verbindungen, die zu Ihrer Geschichte passen.»
             </blockquote>

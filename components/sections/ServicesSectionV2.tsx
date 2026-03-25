@@ -58,7 +58,7 @@ export function ServicesSectionV2() {
           {services.map(({ number, title, description, icon }) => (
             <div
               key={number}
-              className="group relative flex flex-col gap-8 overflow-hidden rounded-2xl bg-white p-10 transition-shadow hover:shadow-lg"
+              className="group relative flex flex-col gap-8 overflow-hidden rounded-2xl bg-white p-6 transition-shadow hover:shadow-lg md:p-10"
             >
               {/* Faint number watermark */}
               <span className="pointer-events-none absolute -right-3 -top-4 select-none font-sans text-[7rem] font-black leading-none text-brand-border/50 transition-colors group-hover:text-brand-blue/5">

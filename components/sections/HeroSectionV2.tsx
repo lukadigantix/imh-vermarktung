@@ -17,7 +17,7 @@ export function HeroSectionV2() {
     <section className="bg-white pt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Headline */}
-        <h1 className="mt-10 py-16 text-center font-sans text-6xl font-light leading-[1.05] tracking-tight text-brand-dark md:text-8xl lg:text-[7rem]">
+        <h1 className="mt-10 py-6 text-center font-sans text-4xl font-light leading-[1.05] tracking-tight text-brand-dark sm:text-6xl md:py-16 md:text-8xl lg:text-[7rem]">
           Finden Sie Ihr{" "}
           <br className="hidden sm:block" />
           Traumzuhause.
@@ -30,7 +30,7 @@ export function HeroSectionV2() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`rounded-full px-5 py-2 font-sans text-sm font-medium transition-colors ${
+                className={`rounded-full px-3 py-1.5 font-sans text-sm font-medium transition-colors sm:px-5 sm:py-2 ${
                   activeTab === tab.id
                     ? "bg-brand-dark text-white shadow-sm"
                     : "text-brand-muted hover:text-brand-dark"
@@ -86,23 +86,22 @@ export function HeroSectionV2() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Trust strip */}
-        <div className="grid grid-cols-3 items-center gap-6 border-t border-brand-border py-8">
+        <div className="flex items-center justify-between gap-4 border-t border-brand-border py-6 sm:grid sm:grid-cols-3 sm:gap-6 md:py-8">
 
-          {/* Left — Google / IMH rating */}
-          <div className="flex items-start gap-3">
-            {/* Google G icon */}
-            <svg width="32" height="32" viewBox="0 0 48 48" className="shrink-0 mt-0.5">
+          {/* Left — Google rating */}
+          <div className="flex items-center gap-2.5">
+            <svg width="28" height="28" viewBox="0 0 48 48" className="shrink-0 md:w-8 md:h-8">
               <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
               <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.7 7.4 6.3 14.7z"/>
               <path fill="#FBBC05" d="M24 46c5.9 0 10.9-2 14.5-5.4l-6.7-5.5C29.8 36.8 27.1 38 24 38c-6.1 0-10.7-3.9-12.3-9.3L4.6 34c3.5 7.4 10.5 12 19.4 12z"/>
               <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.7 2.8-2.4 5.1-4.7 6.6l6.7 5.5C41.8 37.4 45 31.2 45 24c0-1.3-.2-2.7-.5-4z"/>
             </svg>
             <div>
-              <p className="font-sans text-sm font-bold text-brand-dark leading-tight">Google Bewertungen</p>
-              <p className="font-sans text-xs text-brand-muted mt-0.5">Exzellent, 50+ Bewertungen</p>
-              <div className="flex items-center gap-0.5 mt-1.5">
+              <p className="font-sans text-xs font-bold text-brand-dark leading-tight md:text-sm">Google Bewertungen</p>
+              <p className="font-sans text-[0.65rem] text-brand-muted mt-0.5">Exzellent, 50+</p>
+              <div className="flex items-center gap-0.5 mt-1">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#F5A623">
+                  <svg key={i} width="11" height="11" viewBox="0 0 24 24" fill="#F5A623">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
@@ -110,9 +109,9 @@ export function HeroSectionV2() {
             </div>
           </div>
 
-          {/* Center — Quote */}
-          <div className="flex flex-col items-center text-center">
-            <blockquote className="font-sans text-base font-medium leading-snug text-brand-dark">
+          {/* Center — Quote (hidden on mobile) */}
+          <div className="hidden flex-col items-center text-center sm:flex">
+            <blockquote className="font-sans text-sm font-medium leading-snug text-brand-dark md:text-base">
               «Isabelle Haesler findet für jede Liegenschaft den richtigen Käufer — verlässlich und diskret.»
             </blockquote>
             <p className="mt-2 font-sans text-xs text-brand-muted">Sandra K.</p>
@@ -120,12 +119,12 @@ export function HeroSectionV2() {
 
           {/* Right — Arrow + label */}
           <div className="flex flex-col items-end gap-1.5">
-            <button className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 text-brand-dark transition-colors hover:bg-brand-blue hover:text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-brand-dark transition-colors hover:bg-brand-blue hover:text-white md:h-12 md:w-12">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </button>
-            <p className="font-sans text-xs text-brand-muted">Alle Bewertungen</p>
+            <p className="font-sans text-[0.65rem] text-brand-muted md:text-xs">Alle Bewertungen</p>
           </div>
 
         </div>
